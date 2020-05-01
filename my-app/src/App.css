@@ -30,3 +30,8 @@ button{
 .recipes-list{
   margin: 3%;
 }
+
+form{
+  display:flex;
+  flex-direction: column;
+}
