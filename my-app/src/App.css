@@ -21,7 +21,7 @@ input{
   margin-bottom: 0.6rem;
   padding: 1%;
   border-radius: 0.3rem; 
-  width: 28%;
+  /* width: 28%; */
 }
 
 /* .btn{
@@ -42,6 +42,7 @@ button{
 button:hover{
   background: none; 
   color:white; 
+  font-weight: bold;
 }
 
 .recipes-list{
@@ -49,8 +50,8 @@ button:hover{
 }
 
 form{
-  display:flex;
-  flex-direction: column;
+  /* display:flex;
+  flex-direction: column; */
   align-items: center;
   opacity: 0.85;
 }
