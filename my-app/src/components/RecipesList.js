@@ -90,7 +90,7 @@ console.log(recipes, 'recipes props data')
   }
 
   return (
-    <div>
+    <div className="forms-wrapper">
 
 <div className="editForm">
         {editing && (

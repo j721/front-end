@@ -25,8 +25,10 @@ const Recipe = () => {
     <div>
       <h1>Welcome to Secret Family Recipes!</h1>
       <SearchBar recipes={recipeList} setRecipeList={setRecipeList}/>
+      <div className="recipes-container">
       <AddRecipe/>
       <RecipesList recipes={recipeList} />
+      </div>
     </div>
   );
 };

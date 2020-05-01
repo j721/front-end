@@ -50,7 +50,7 @@ const  AddRecipe = ( props )=> {
 
 
     return(
-        <div>
+        <div className="addRecipe">
             <h2>Add Recipe</h2>
             <form onSubmit ={handleSubmit} >
                 <label>Title:</label><input placeholder='title' 
