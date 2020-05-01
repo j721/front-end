@@ -91,31 +91,8 @@ console.log(recipes, 'recipes props data')
 
   return (
     <div>
-      {recipes.map((recipe) => (
-        <div key={recipe.id}>
-          <h3>{recipe.title}</h3>
-          <p>{recipe.category}</p>
-          <p>{recipe.ingredients}</p>
-          <p>{recipe.instructions}</p>
-          <p>{recipe.source}</p>
 
-          <button className='btn'
-            onClick={() => {
-              deleteRecipe(recipe);
-            }}
-          >
-            Delete
-          </button>
-          <button className='btn'
-            onClick={() => {
-              editRecipe(recipe);
-            }}
-          >
-            Edit
-          </button>
-        </div>
-      ))}
-      <div className="editForm">
+<div className="editForm">
         {editing && (
           <form onSubmit ={saveEdit}>
             <h3 className="edit-title">Edit Recipe </h3>
@@ -153,12 +130,80 @@ console.log(recipes, 'recipes props data')
                placeholder ="category"
                value={recipeToEdit.category}
             />
-            <button className='btn'
+            <button 
             type="submit">save</button>
-            <button className='btn' onClick={() => setEditing(false)}>cancel</button>
+            <button  onClick={() => setEditing(false)}>cancel</button>
           </form>
         )}
       </div>
+      {recipes.map((recipe) => (
+        <div className ="recipes-list" key={recipe.id}>
+          <h3>{recipe.title}</h3>
+          <p>{recipe.category}</p>
+          <p>{recipe.ingredients}</p>
+          <p>{recipe.instructions}</p>
+          <p>{recipe.source}</p>
+
+          <button 
+            onClick={() => {
+              deleteRecipe(recipe);
+            }}
+          >
+            Delete
+          </button>
+          <button 
+            onClick={() => {
+              editRecipe(recipe);
+            }}
+          >
+            Edit
+          </button>
+        </div>
+      ))}
+      {/* <div className="editForm">
+        {editing && (
+          <form onSubmit ={saveEdit}>
+            <h3 className="edit-title">Edit Recipe </h3>
+            <input
+              name ="title"
+              placeholder ="title"
+              value={recipeToEdit.title}
+              onChange ={editOnChange}
+            />
+
+            <input
+              onChange={editOnChange}
+              name="source"
+              placeholder ="source"
+              value={recipeToEdit.source}
+            />
+
+            <input
+              onChange={editOnChange}
+              name ="ingredients"
+              placeholder ="ingredients"
+              value={recipeToEdit.ingredients}
+            />
+
+            <input
+              onChange={editOnChange}
+              name ="instructions"
+              placeholder ="instructions"
+              value={recipeToEdit.instructions}
+            />
+
+            <input
+               onChange={editOnChange}
+               name ="category"
+               placeholder ="category"
+               value={recipeToEdit.category}
+            />
+            <button 
+            type="submit">save</button>
+            <button  onClick={() => setEditing(false)}>cancel</button>
+          </form>
+        )}
+      </div> */}
     </div>
   );
         };

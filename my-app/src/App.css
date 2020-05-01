@@ -15,11 +15,18 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+input{
+  margin-right: 1rem; 
+  margin-top: 0.5rem; 
+  padding: 1%;
+  border-radius: 0.3rem; 
 }
 
 
 button{
-  color:white; 
+  color:purple;  
+}
+
+.recipes-list{
+  margin: 3%;
 }
