@@ -138,14 +138,15 @@ console.log(recipes, 'recipes props data')
       </div>
       {recipes.map((recipe) => (
         <div className ="recipes-list" key={recipe.id}>
-          <h3>{recipe.title}</h3>
-          <p>{recipe.category}</p>
-          <p>{recipe.ingredients}</p>
-          <p>{recipe.instructions}</p>
-          <p>{recipe.source}</p>
+          <h3>Title: {recipe.title}</h3>
+          <p>Category: {recipe.category}</p>
+          <p>Recipe: {recipe.ingredients}</p>
+          <p>Instructions: {recipe.instructions}</p>
+          <p>Recipe: {recipe.source}</p>
 
           <button 
             onClick={() => {
+              window.alert("Recipe has been deleted!")
               deleteRecipe(recipe);
             }}
           >
